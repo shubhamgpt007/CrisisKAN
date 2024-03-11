@@ -2,7 +2,7 @@
 Code repository of paper "CrisisKAN: Knowledge-infused and Explainable Multimodal Attention Network for Crisis Event Classification" published in ECIR 2024
 
 
-> Gupta, Saini et al. "CrisisKAN: Knowledge-infused and Explainable Multimodal Attention Network for Crisis Event Classification. 2024."
+> Gupta and Saini et al. "CrisisKAN: Knowledge-infused and Explainable Multimodal Attention Network for Crisis Event Classification. 2024."
 
 To cite the paper:
 ```
