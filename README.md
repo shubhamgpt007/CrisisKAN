@@ -15,3 +15,7 @@ To cite the paper:
       primaryClass={cs.LG}
 }
 ```
+
+## To Run
+* Setup the environemnt and download the dataset using script  `bash setup.sh`
+* Run the pipeline with `bash train_debug.sh`
