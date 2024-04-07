@@ -1,5 +1,5 @@
 echo "Installing dependencies..."
-pip install -r requirements.txt
+conda env create -f requirements.yml
 
 function getData {
     cd datasets && \
