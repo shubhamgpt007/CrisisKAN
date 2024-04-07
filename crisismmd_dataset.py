@@ -124,7 +124,7 @@ class CrisisMMDataset(BaseDataset):
         #self.tokenizer = XLNetTokenizer.from_pretrained('xlnet-base-cased')
         self.tokenizer = ElectraTokenizer.from_pretrained('google/electra-base-discriminator')
         #self.tokenizer = AlbertTokenizer.from_pretrained('albert-base-v2')
-        ann_file = '%s/crisismmd_datasplit_all/wiki_settingA/task_%s_text_img_%s.tsv' % (
+        ann_file = '%s/crisismmd_datasplit_all/task_%s_text_img_%s.tsv' % (
             self.dataset_root, task_dict[task], phase
         )
 
