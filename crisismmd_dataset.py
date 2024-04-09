@@ -75,7 +75,7 @@ class CrisisMMDataset(BaseDataset):
         for l in self.info:
             l = l.rstrip('\n')
             #	label_text,	label_image, label_text_image,
-            event_name, tweet_id, image_id, tweet_text,	image,	label, final_text, trigger_words = l.split(
+            event_name, tweet_id, image_id, tweet_text,	image,	label,	label_text,	label_image, label_text_image = l.split(
                 '\t')
 
             if self.consistent_only and label_text != label_image:
