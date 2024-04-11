@@ -50,29 +50,24 @@ def final_wiki_text(text):
         except:
             text+= ''
     
-    annotations = tagme.annotate(text)
-     # Print annotations with a score higher than 0.1
-    if (annotations != None):
-        for ann in annotations.get_annotations(0.15):
-            entities.append(ann.mention.split(',')[0])
-            final_wiki_tags.append(ann.entity_title)
-    return text,  final_wiki_tags
+    # annotations = tagme.annotate(text)
+    #  # Print annotations with a score higher than 0.1
+    # if (annotations != None):
+    #     for ann in annotations.get_annotations(0.15):
+    #         entities.append(ann.mention.split(',')[0])
+    #         final_wiki_tags.append(ann.entity_title)
+    # return text ,  final_wiki_tags
+    return text
         
 
 final_text=[]
-final_tags=[]
-final_ls=[]
 for i,row in tqdm(informative_train_df.iterrows(), total= len(informative_train_df)):
-    text, final_wiki_tags = final_wiki_text(row['final_text'])
-    final_text.append(text)
-    final_tags.append(final_wiki_tags)
-
-final_ls.append([final_text,final_tags])
-
+    final_text.append(final_wiki_text(row['final_text']))
 
 
 with open(output_file, 'wb') as f:
-    pickle.dump(final_ls, f)
+    pickle.dump(final_text, f)
+
 
 
 
