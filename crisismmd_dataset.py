@@ -26,8 +26,8 @@ from paths import dataroot
 
 task_dict = {
     'task1': 'informative',
+    'task2_full': 'humanitarian',
     'task2': 'humanitarian',
-    'task2_merged': 'humanitarian',
     'task3' : 'damage'
 }
 
@@ -74,8 +74,9 @@ class CrisisMMDataset(BaseDataset):
 
         for l in self.info:
             l = l.rstrip('\n')
-            #	label_text,	label_image, label_text_image,
-            event_name, tweet_id, image_id, tweet_text,	image,	label,	label_text,	label_image, label_text_image = l.split(
+            #	Generate final_text first from the wiki.py. Check the code of wiki.py and run according to the dataset.
+
+            event_name, tweet_id, image_id, tweet_text,	image,	label,	label_text, label_image, label_text_image, final_text = l.split(
                 '\t')
 
             if self.consistent_only and label_text != label_image:
@@ -85,7 +86,7 @@ class CrisisMMDataset(BaseDataset):
                 {
                     'path_image': '%s/%s' % (self.dataset_root, image),
 
-                    'text': final_text ,
+                    'text': final_text,
                     'text_tokens': self.tokenize(final_text),
 
                     'label_str': label,
@@ -113,10 +114,10 @@ class CrisisMMDataset(BaseDataset):
         self.label_map = None
         if task == 'task1':
             self.label_map = labels_task1
+        elif task == 'task2_full':
+            self.label_map = labels_task2_full
         elif task == 'task2':
             self.label_map = labels_task2
-        elif task == 'task2_merged':
-            self.label_map = labels_task2_merged
         elif task == 'task3':
             self.label_map = labels_task3
 
