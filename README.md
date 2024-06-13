@@ -4,6 +4,8 @@ Code repository of paper "CrisisKAN: Knowledge-infused and Explainable Multimoda
 
 > Gupta and Saini et al. "CrisisKAN: Knowledge-infused and Explainable Multimodal Attention Network for Crisis Event Classification. 2024."
 
+Preprint: https://arxiv.org/abs/2401.06194
+
 To cite the paper:
 ```
 @misc{gupta2024crisiskan,
