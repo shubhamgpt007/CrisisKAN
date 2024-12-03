@@ -17,6 +17,9 @@ To cite the paper:
       primaryClass={cs.LG}
 }
 ```
+# CrisisMMD Dataset
+Website: https://crisisnlp.qcri.org/crisismmd
+Dataset: https://crisisnlp.qcri.org/data/crisismmd/CrisisMMD_v2.0.tar.gz
 
 ## Run the model
 * Setup the environemnt and download the dataset using script  `bash setup.sh`
