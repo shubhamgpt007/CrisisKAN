@@ -6,6 +6,7 @@ import re
 import wikipedia
 from tqdm import tqdm
 import pickle
+import sys
 
 input_file = sys.argv[1]
 output_file = sys.argv[2]
